@@ -1,0 +1,53 @@
+#package Overview
+package_name: regression_model
+
+# Data Files:
+training_data_files: seoul.csv
+test_data_file: test.csv
+
+# Variables
+# The varibale we are attempting to predict (Duration)
+target: Duration
+
+pipeline_name: regression_model
+pipeline_save_file: regression_model_output_v
+
+# set train/test split
+test_size: 0.1
+
+# to set the random seed
+random_state: 42
+
+alpha: 0.001
+ref_var :
+    - Precip
+    - Unnamed: 0
+    - Snow
+    - Solar
+
+features:
+  - Unnamed: 0
+  - Distance
+  - PLong
+  - PLatd
+  - DLong
+  - DLatd
+  - Haversine
+  - Pmonth
+  - Pday
+  - Phour
+  - Pmin
+  - PDweek
+  - Dmonth
+  - Dday
+  - Dhour
+  - Dmin
+  - DDweek
+  - Temp
+  - Precip
+  - Wind
+  - Humid
+  - Solar
+  - Snow
+  - GroundTemp
+  - Dust
