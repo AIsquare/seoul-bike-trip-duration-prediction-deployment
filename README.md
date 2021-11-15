@@ -9,9 +9,12 @@ Download it from [here](https://www.kaggle.com/saurabhshahane/seoul-bike-trip-du
 # Production level code
 This is more of advanced step of my earlier work [here](https://github.com/AIsquare/Seoul-Bike-Trip-Duration-Prediction). And the goal of this project is to devlop a skeleton that  could be easy to follow and anyone can builtupon that skeleton. The repo above mentioned is a deployed model on heroku with the help of streamlit. 
 ![](heroku.jpg)
-for feature engineering and EDA look into this folder [](https://github.com/AIsquare/seoul-bike-trip-duration-prediction-deployment/upload/main/research%20and%20development)
 
-### Before you judge this is just a dummy model, for the sake of my learning to understand production code, I have build a rubbish model, feel free to contribute.
+
+
+> for feature engineering and EDA look into this [folder](https://github.com/AIsquare/seoul-bike-trip-duration-prediction-deployment/upload/main/research%20and%20development)
+
+### Before you judge this is just a dummy model, for the sake of my learning to understand production code, I have build a rubbish model, feel free to contribute. Key thing is to follow the skeleton/structure.
 ## Skeleton
 There are many phases of machine learning pipeline and its quite iterative, but as the pioneer say if you are trying to build a model, first try to build the most dumbest model from very little data. A littl data I mean take a sampling of your data. Since I don't have a high end laptop i did the same thing I took a sample and trained on my laptop. Coming back to ML Pipeline
 
