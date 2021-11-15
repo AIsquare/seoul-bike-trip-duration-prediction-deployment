@@ -7,7 +7,8 @@ import regression_model
 
 # Project Directories
 
-PACKAGE_ROOT = Path(regression_model.__file__).resolve().parent()
+PACKAGE_ROOT = Path(regression_model.__file__).resolve().parent
+print(PACKAGE_ROOT)
 ROOT = PACKAGE_ROOT.parent
 CONFIG_FILE_PATH = PACKAGE_ROOT / "config.yml"
 DATASET_DIR = PACKAGE_ROOT / "datasets"
@@ -28,9 +29,9 @@ class ModelConfig(BaseModel):
     test_size: float
     random_state: int
     alpha: float
-    ref_var: str
+    ref_var: List[str]
 
-class Config(BaseMode):
+class Config(BaseModel):
     '''Master config object'''
     app_config: AppConfig
     model_config: ModelConfig

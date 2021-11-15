@@ -6,10 +6,11 @@ import pandas as pd
 from sklearn.pipeline import Pipeline
 
 from regression_model import __version__ as _version
-from regression_model_model.config.core import DATASET_DIR, TRAINED_MODEL_DIR, config
+from regression_model.config.core import DATASET_DIR, TRAINED_MODEL_DIR, config
 
 def load_dataset(*, file_name: str) -> pd.DataFrame:
-    return dataframe = pd.read_csv(Path(f"{DATASET_DIR}/{file_name}"))
+    dataframe = pd.read_csv(Path(f"{DATASET_DIR}/{file_name}"))
+    return dataframe
 
 def save_pipeline(*, pipeline_to_persist: Pipeline) -> None:
     '''Persist the pipeline. Saves the version model, and overwrites
@@ -33,7 +34,8 @@ def remove_old_pipelines(*, files_to_keep: t.List[str]) -> None:
     mapping between the package version and the model
     version to be imported and used by other applications'''
 
+    # it will not remove any init file.
     do_not_delete = files_to_keep + ["__init__.py"]
-    for model_file in TRAINED_MODEL_DIR.iterdir()
+    for model_file in TRAINED_MODEL_DIR.iterdir():
         if model_file.name not in do_not_delete:
             model_file.unlink()
